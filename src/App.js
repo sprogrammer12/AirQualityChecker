@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import CitySearch from './CitySearch';
 
 
 
@@ -33,8 +34,8 @@ function App() {
 
   return (
     <div>
-     <h1>Air Quality Index</h1>
-     <CitySearch getAirQualityIndex = {getAirQualityIndex}/>
+      <h1>Air Quality Index Checker</h1>
+      <CitySearch getAirQualityIndex = {getAirQualityIndex}/>
     </div>
   );
 }
