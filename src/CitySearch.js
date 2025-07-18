@@ -22,9 +22,9 @@ const CitySearch = ({getAirQualityIndex}) =>{
     }
 
     return(
-        <form onSubmit={handleSearch}>
-            <input type='text' placeholder='Enter City' onChange={handleInputChange}></input>
-            <button type='submit'>Search</button>
+        <form onSubmit={handleSearch} className='mb-4'>
+            <input type='text' placeholder='Enter City' onChange={handleInputChange} className='form-control'></input>
+            <button type='submit' className='btn btn-primary mt-3'>Search</button>
         </form>
     )
 }

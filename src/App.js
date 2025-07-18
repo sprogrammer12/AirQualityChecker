@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 import CitySearch from './CitySearch';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import AirQualityCard from './AirQualityCard';
 
 
 function App() {
@@ -33,9 +34,24 @@ function App() {
 }
 
   return (
-    <div>
-      <h1>Air Quality Index Checker</h1>
+    <div class='container'>
+      <h1 className='mt-5 mb-3'>Air Quality Index Checker</h1>
       <CitySearch getAirQualityIndex = {getAirQualityIndex}/>
+      {/* if there is an error then show a div with error message */}
+      {error && (
+        <div class='alert alert-danger' role='alert'>
+          {error}
+        </div>
+      )}
+      {airQualityData && (
+        // Air Quality Card Component
+        // Pollutant Info
+        <>
+        <AirQualityCard 
+        data = {airQualityData}
+        />
+        </>
+      )}
     </div>
   );
 }
